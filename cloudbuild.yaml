@@ -25,5 +25,6 @@
    - 'europe-west1'
    - '--platform'
    - 'managed'
+   - '--allow-unauthenticated'
  images:
  - 'gcr.io/$PROJECT_ID/labci-awsgui:$COMMIT_SHA'
