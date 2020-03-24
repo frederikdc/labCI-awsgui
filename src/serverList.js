@@ -119,7 +119,7 @@ const ServerList = (props) => {
             </div>
 
         );
-    } else return (<h2>{props.region}: No EC2 machiness!</h2>)
+    } else return (<h2>{props.region}: No EC2 machiness</h2>)
 };
 
 export default ServerList;
