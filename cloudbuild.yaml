@@ -4,11 +4,10 @@
    args: ["build",
       "-t","gcr.io/$PROJECT_ID/labci-awsgui:$COMMIT_SHA",
       "--build-arg", "REACT_APP_APIHOST=https://cloudrun-api-gssmt3brqq-ew.a.run.app/",
-      "--build-arg", "REACT_APP_STOPPEDVMIMG=https://storage.googleapis.com/aws-gui-0705545/destroy",
-#      "--build-arg", "REACT_APP_STOPPEDVMIMG=${google_storage_bucket_object.pic2.self_link}",
-#      returns "https://www.googleapis.com/storage/v1/b/aws-gui-0705545/o/off"
-#      "--build-arg", "REACT_APP_STARTEDVMIMG=${google_storage_bucket_object.pic1.self_link}",
-      "--build-arg", "REACT_APP_STARTEDVMIMG=https://storage.googleapis.com/aws-gui-0705545/off",  
+      "--build-arg", "REACT_APP_STOPPEDVMIMG=${_PIC1}",
+      "--build-arg", "REACT_APP_STOPPEDVMIMG=${_PIC2}",
+#      "--build-arg", "REACT_APP_STOPPEDVMIMG=https://storage.googleapis.com/aws-gui-0705545/destroy",
+#      "--build-arg", "REACT_APP_STARTEDVMIMG=https://storage.googleapis.com/aws-gui-0705545/off",  
       "."] 
  # push the container image to Container Registry
  - name: 'gcr.io/cloud-builders/docker'
